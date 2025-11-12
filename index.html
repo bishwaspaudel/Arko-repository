@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bishwas Paudel | Personal Website</title>
+  <style>
+    body { font-family: 'Poppins', sans-serif; margin: 0; scroll-behavior: smooth; background-color: #f4f8fb; color: #333; }
+    header { background-color: #e0f0ff; text-align: center; padding: 2rem 1rem; position: sticky; top: 0; z-index: 10; }
+    header h1 { margin: 0; font-size: 2.5rem; color: #0066cc; }
+    header p { margin: 0.5rem 0 1rem; font-size: 1.1rem; color: #555; }
+    nav a { margin: 0 1rem; text-decoration: none; color: #333; font-weight: 500; }
+    nav a:hover { color: #0066cc; }
+
+    section { padding: 3rem 1rem; max-width: 1000px; margin: auto; }
+    h2 { color: #0066cc; text-align: center; margin-bottom: 1.5rem; }
+
+    #about img { display: block; width: 180px; height: 180px; border-radius: 50%; margin: 1rem auto; object-fit: cover; background: #ddd; }
+    #about p { text-align: center; max-width: 700px; margin: auto; }
+
+    .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+    .card { background: white; border-radius: 10px; padding: 1.5rem; box-shadow: 0 2px 6px rgba(0,0,0,0.1); transition: transform 0.3s; }
+    .card:hover { transform: translateY(-5px); }
+    .card h3 { margin-top: 0; color: #0066cc; }
+    .card button { background: #0066cc; color: white; border: none; padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer; }
+    .card button:hover { background: #004999; }
+
+    .blog-post { background: white; padding: 1.5rem; margin-bottom: 1rem; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    .blog-post h3 { color: #0066cc; margin-top: 0; }
+    .blog-post small { color: #777; }
+
+    form { display: flex; flex-direction: column; gap: 1rem; max-width: 500px; margin: auto; }
+    input, textarea { padding: 0.75rem; border: 1px solid #ccc; border-radius: 5px; }
+    button[type=submit] { background: #0066cc; color: white; border: none; padding: 0.75rem; border-radius: 5px; cursor: pointer; }
+    button[type=submit]:hover { background: #004999; }
+
+    footer { background-color: #e0f0ff; text-align: center; padding: 1rem; margin-top: 2rem; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Bishwas Paudel</h1>
+    <p>Exploring the intersection of Health, Technology, and AI.</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <img src="https://via.placeholder.com/180" alt="Bishwas Paudel photo">
+    <p>Hello! I’m <strong>Bishwas Paudel</strong>, a Nepali international student at Weber State University pursuing a Bachelor of Science in Health Promotion. I’m passionate about how Artificial Intelligence and Computer Science can transform healthcare systems and improve public health outcomes. I love learning, creating, and sharing insights about technology and wellness.</p>
+  </section>
+
+  <section id="portfolio">
+    <h2>Academic Portfolio</h2>
+    <div class="portfolio-grid">
+      <div class="card">
+        <h3>AI in Healthcare</h3>
+        <p>Research on using machine learning models to detect disease trends and improve diagnosis accuracy.</p>
+        <button>View More</button>
+      </div>
+      <div class="card">
+        <h3>Health Promotion Campaign</h3>
+        <p>A community project promoting mental wellness through digital media and data analytics.</p>
+        <button>View More</button>
+      </div>
+      <div class="card">
+        <h3>Web Design Project</h3>
+        <p>Built a responsive website integrating public health information and real-time data visualization.</p>
+        <button>View More</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog">
+    <h2>Blog</h2>
+    <div class="blog-post">
+      <h3>How AI is Changing Global Healthcare</h3>
+      <small>November 12, 2025</small>
+      <p>Artificial Intelligence is transforming how we diagnose, treat, and prevent diseases across the world...</p>
+    </div>
+    <div class="blog-post">
+      <h3>Student Life in the U.S. as a Nepali Learner</h3>
+      <small>October 28, 2025</small>
+      <p>From adapting to campus culture to exploring new opportunities, here’s what my journey has been like...</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="return submitForm(event)">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p style="text-align:center;margin-top:1rem;">Connect with me:
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a> |
+      <a href="https://github.com" target="_blank">GitHub</a> |
+      <a href="https://instagram.com" target="_blank">Instagram</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Bishwas Paudel. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function submitForm(event) {
+      event.preventDefault();
+      alert('Thank you for reaching out! I will get back to you soon.');
+      event.target.reset();
+      return false;
+    }
+  </script>
+
+</body>
+</html>
